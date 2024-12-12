@@ -24,7 +24,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "tb_postagens")
 public class Postagem {
-
+ 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

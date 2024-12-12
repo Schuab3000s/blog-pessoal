@@ -42,7 +42,7 @@ public class PostagemController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> getById(@PathVariable Long id) {
-		return postagemRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
+		return postagemRepository.findById(id).map(ResponseEntity::ok)
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
